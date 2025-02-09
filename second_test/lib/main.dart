@@ -55,7 +55,7 @@ class firstApp extends StatelessWidget {
             Container(
                 height: 300,
                 width: 300,
-                color: Colors.orange,
+                color: Color.fromARGB(255, 13, 10, 233),
                 child: Stack(children: [
                   //SizedBox(width: 10,height: 16,),
                   Positioned(

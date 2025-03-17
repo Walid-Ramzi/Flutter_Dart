@@ -1,13 +1,7 @@
 // ignore_for_file: prefer_const_constructors, sort_child_properties_last, deprecated_member_use
 
-import 'dart:math';
-import 'dart:ui';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(const firstApp());
@@ -22,7 +16,7 @@ class firstApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
-          backgroundColor: Colors.cyan,
+          backgroundColor: Colors.green,
           appBar: AppBar(
             elevation: 20,
             centerTitle: true,
@@ -55,7 +49,7 @@ class firstApp extends StatelessWidget {
             Container(
                 height: 300,
                 width: 300,
-                color: Color.fromARGB(255, 13, 10, 233),
+                color: Color.fromARGB(255, 32, 29, 230),
                 child: Stack(children: [
                   //SizedBox(width: 10,height: 16,),
                   Positioned(

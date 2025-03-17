@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
           leading: IconButton(
               onPressed: () {},
               icon: const Icon(Icons.menu),
-              color: Colors.red),
+              color: Color.fromARGB(255, 204, 23, 10)),
           title: IconButton(
             onPressed: () {},
             icon: const Icon(Icons.search),
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
           ]),
       floatingActionButton: FloatingActionButton(onPressed: () {
         
-      },child: Icon(Icons.add) ,splashColor: Color.fromARGB(254, 255, 5, 5),),
+      },child: Icon(Icons.gamepad_rounded),splashColor: Color.fromARGB(253, 21, 9, 196),),
       body:SingleChildScrollView(scrollDirection: Axis.vertical,
         child:  
       Column(
@@ -56,7 +56,7 @@ class MyApp extends StatelessWidget {
         child: Row(children: [
           Container(
             child: Text(
-              "intoyour wind ",
+              "intoyour windsdsqdqzddzqdzqdzqdz ",
               style: TextStyle(color: Colors.black, fontSize: 24,fontWeight: FontWeight.bold),
             ),
             decoration: BoxDecoration(

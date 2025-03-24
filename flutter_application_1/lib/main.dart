@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
           leading: IconButton(
               onPressed: () {},
               icon: const Icon(Icons.menu),
-              color: Color.fromARGB(255, 204, 23, 10)),
+              color: Color.fromARGB(255, 212, 22, 8)),
           title: IconButton(
             onPressed: () {},
             icon: const Icon(Icons.search),
@@ -56,7 +56,7 @@ class MyApp extends StatelessWidget {
         child: Row(children: [
           Container(
             child: Text(
-              "intoyour windsdsqdqzddzqdzqdzqdz ",
+              "intoyour winds",
               style: TextStyle(color: Colors.black, fontSize: 24,fontWeight: FontWeight.bold),
             ),
             decoration: BoxDecoration(

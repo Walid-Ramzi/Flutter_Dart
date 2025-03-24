@@ -16,7 +16,7 @@ class firstApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
-          backgroundColor: Colors.green,
+          backgroundColor: const Color.fromARGB(255, 52, 219, 57),
           appBar: AppBar(
             elevation: 20,
             centerTitle: true,
@@ -58,7 +58,7 @@ class firstApp extends StatelessWidget {
                     child: Container(
                       height: 100,
                       width: 100,
-                      color: const Color.fromARGB(255, 51, 26, 24),
+                      color: Color.fromARGB(255, 160, 21, 11),
                       //margin: EdgeInsets.only(top: 10),
                     ),
                   ),

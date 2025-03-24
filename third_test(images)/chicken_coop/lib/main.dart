@@ -12,10 +12,10 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: Scaffold(
             appBar: AppBar(
-          actions: [IconButton(onPressed: () {}, icon: Icon(Icons.person))],
-          title: Text('Chicken Coop'),
+          actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.person))],
+          title: const Text('Chicken Coope'),
           leading: IconButton(
-            icon: Icon(Icons.menu),
+            icon: const Icon(Icons.menu),
             onPressed: () {},
           ),
           elevation: 30,

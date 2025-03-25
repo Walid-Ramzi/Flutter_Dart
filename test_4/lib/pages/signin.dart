@@ -1,5 +1,4 @@
-// ignore_for_file: prefer_const_constructors
-
+// ignore_for_file: prefer_const_constructors, sort_child_properties_last
 
 import 'package:flutter/material.dart';
 
@@ -11,13 +10,20 @@ class Signin extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(actions: [
-          IconButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/');
-            },
-            icon: Icon(Icons.arrow_back),
-          )],
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            Navigator.pop(context,"/");
+          },
+          child: Icon(Icons.home),
+          backgroundColor: const Color.fromARGB(255, 30, 168, 236),
+          shape: CircleBorder(),
+        ),
+        appBar: AppBar(
+          leading: IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(Icons.arrow_back)),
           centerTitle: true,
           title: Text(
             "sign_up page",
@@ -33,7 +39,6 @@ class Signin extends StatelessWidget {
           color: Color.fromARGB(255, 255, 255, 255),
           child: SingleChildScrollView(
             child: Column(
-              
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -55,7 +60,6 @@ class Signin extends StatelessWidget {
                 Divider(color: Colors.blueGrey, height: 60),
                 SizedBox(
                   height: 10,
-                  
                 ),
                 Container(
                   child: Text(
@@ -153,7 +157,7 @@ class Signin extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () {},
                   child: Text(
-                    "Login",
+                    "Register",
                     style: TextStyle(
                         fontSize: 30,
                         fontStyle: FontStyle.italic,
@@ -162,15 +166,13 @@ class Signin extends StatelessWidget {
                   ),
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(
-                        Color.fromARGB(255, 38, 193, 240)),
-                    
+                        Color.fromARGB(255, 66, 238, 238)),
                   ),
                 ),
               ],
             ),
           ),
         ),
-
       ),
     );
   }

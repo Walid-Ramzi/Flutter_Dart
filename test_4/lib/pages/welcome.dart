@@ -47,9 +47,10 @@ class Welcome extends StatelessWidget {
               child: Text(
                 "Login",
                 style: TextStyle(
+                    fontStyle: FontStyle.italic,
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
-                    color: Colors.black),
+                    color: Color.fromARGB(255, 255, 81, 232)),
               ),
               style: ButtonStyle(padding: MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 10,horizontal: 50)),
                   backgroundColor: MaterialStateProperty.all(Colors.blueGrey)),
@@ -65,8 +66,9 @@ class Welcome extends StatelessWidget {
                 "Sign_up",
                 style: TextStyle(
                     fontSize: 25,
+                    fontStyle: FontStyle.italic,
                     fontWeight: FontWeight.bold,
-                    color: Colors.black),
+                    color: Color.fromARGB(255, 235, 58, 241)),
               ),
               style: ButtonStyle(
                   padding: MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 10,horizontal: 50)),

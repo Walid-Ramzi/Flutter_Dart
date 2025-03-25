@@ -12,8 +12,16 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: Scaffold(
             appBar: AppBar(
-          actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.person))],
-          title: const Text('Chicken Coope'),
+          actions: [
+            IconButton(onPressed: () {}, icon: const Icon(Icons.person))
+          ],
+          title: const Text(
+            'Chicken Coope',
+            style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 19,
+                fontFamily: "assets/fonts/PlaywriteHU-Regular.ttf"),
+          ),
           leading: IconButton(
             icon: const Icon(Icons.menu),
             onPressed: () {},

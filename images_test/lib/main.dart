@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
             iconSize: 30,
           ),
           centerTitle: true,
-          title: Text('Chicken Coop',
+          title: Text('Chicken Coop App',
               style: TextStyle(
                   fontFamily: "PlaywriteHU",
                   fontSize: 25,
@@ -53,9 +53,9 @@ class MyApp extends StatelessWidget {
                         Positioned(
                             child: ElevatedButton(
                           onPressed: () {},
-                          style: ButtonStyle(
-                              padding:
-                                  MaterialStateProperty.all(EdgeInsets.all(0))),
+                          //style: ButtonStyle(
+                              //padding:
+                                  //MaterialStateProperty.all(EdgeInsets.all(0))),
                           child: Container(
                             padding: EdgeInsets.all(10),
                             color: Colors.white,
@@ -63,14 +63,14 @@ class MyApp extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(10),
                                 child: Image.asset(
                                   'assets/images/dark.jpg',
-                                  fit: BoxFit.fill,
+                                  fit: BoxFit.cover,
                                   width: 100,
                                 )),
                           ),
                         )),
                         Positioned(
                           child: Text(
-                            'hello',
+                            'helloo',
                             style: TextStyle(color: Colors.red,fontSize: 50),
                           ),
                         ),
@@ -78,17 +78,17 @@ class MyApp extends StatelessWidget {
                   Row(children: [
                     ElevatedButton(
                         onPressed: () {},
-                        style: ButtonStyle(
-                            padding:
-                                MaterialStateProperty.all(EdgeInsets.all(0))),
+                        //style: ButtonStyle(
+                            //padding:
+                                //MaterialStateProperty.all(EdgeInsets.all(0))),
                         child: Positioned(
                           child: Container(
                             padding: EdgeInsets.fromLTRB(0, 10, 10, 10),
                             color: Colors.white,
                             child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
-                                child: Image.network(
-                                  'https://unsplash.com/photos/brown-chicken-on-green-grass-field-during-daytime-yEW23jxVsNI',
+                                child: Image.asset(
+                                  'dark.jpg',
                                   fit: BoxFit.cover,
                                   width: 200,
                                   height: 100,

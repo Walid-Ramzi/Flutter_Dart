@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, sort_child_properties_last, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, sized_box_for_whitespace
+// ignore_for_file: prefer_const_constructors, sort_child_properties_last, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, sized_box_for_whitespace, deprecated_member_use
 
 import 'dart:math';
 import 'dart:ui';
@@ -13,50 +13,41 @@ class Welcome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        resizeToAvoidBottomInset: true,
-        body: Container(
-          color: Color.fromARGB(255, 248, 175, 175),
-          height: double.infinity,
-          width: double.infinity,
-          child: Stack(
-            children: [
-              Positioned(
-                child: Image.asset(
-                  "assets/img/main_top.png",
-                  width: 220,
-                ),
-                top: 0,
-                left: 0,
+    return Scaffold(
+      body: Container(
+        color: Color.fromARGB(255, 248, 175, 175),
+        height: double.infinity,
+        width: double.infinity,
+        child: Stack(
+          children: [
+            Positioned(
+              child: Image.asset(
+                "assets/img/main_top.png",
+                width: 220,
               ),
-              Positioned(
-                child: Image.asset(
-                  "assets/img/main_bottom.png",
-                  width: 130,
-                ),
-                bottom: 0,
+            ),
+            Positioned(
+              child: Image.asset(
+                "assets/img/main_bottom.png",
+                width: 130,
               ),
-              Positioned(
-                child: Image.asset(
-                  "assets/img/main_bottom2.png",
-                  width: 150,
-                ),
-                right: 0,
-                bottom: double.minPositive,
+              bottom: 0,
+            ),
+            Positioned(
+              child: Image.asset(
+                "assets/img/main_bottom2.png",
+                width: 150,
               ),
-              Positioned(
-                  child: SvgPicture.asset(
-                    "assets/svg/chat.svg",
-                    width: 260,
-                  ),
-                  top: 110,
-                  left: 70),
-              Positioned(
-                  child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
+              right: 0,
+              bottom: double.minPositive,
+            ),
+           
+            Positioned(
+                child: Center(
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
                     Container(
                       margin: EdgeInsets.fromLTRB(46, 20, 46, 0),
                       width: 320,
@@ -86,155 +77,172 @@ class Welcome extends StatelessWidget {
                         ),
                         SizedBox(
                           height: 10,
+                          
                         ),
-                        Container(
-                          child: Text(
-                            "",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontSize: 20,
-                                fontFamily: "Delius",
-                                fontWeight: FontWeight.w700,
-                                color: Colors.lightBlue,
-                                letterSpacing: 0.8),
-                          ),
-                        ),
+                        Positioned(
+                child: 
+                   Center(
+                    child: SvgPicture.asset(
+                      "assets/svg/chat.svg",
+                      width: 230,
+                    ),
+                  ),
+                ),   
                       ]),
                     )
-                  ])),
-              Positioned(
-                  child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    SizedBox(
-                      height: 420,
-                    ),
-                    Center(
-                      child: Container(
-                        width: 350,
-                        child: TextField(
-                          textInputAction: TextInputAction.next,
-                          decoration: InputDecoration(
-                            label: Text(
-                              "Email or Username",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Color.fromARGB(255, 191, 55, 245)),
-                            ),
-                            labelStyle: TextStyle(fontWeight: FontWeight.bold),
-                            hintText: "you@domain.com",
-                            hintStyle: TextStyle(
-                                color: Color.fromARGB(255, 151, 15, 241)),
-                            prefixIcon: Icon(
-                              Icons.person,
-                              color: Color.fromARGB(255, 191, 55, 245),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                  width: 2,
-                                  color: Color.fromARGB(255, 205, 47, 236)),
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                  width: 2,
-                                  color: Color.fromARGB(255, 205, 47, 236)),
-                              borderRadius: BorderRadius.circular(20),
-                            ),
+                  ]),
+            )),
+            Positioned(
+                child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: 380,
+                  ),
+                  Center(
+                    child: Container(
+                      width: 350,
+                      child: TextField(
+                        textInputAction: TextInputAction.next,
+                        decoration: InputDecoration(
+                          label: Text(
+                            "Email or Username",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Color.fromARGB(255, 191, 55, 245)),
+                          ),
+                          labelStyle: TextStyle(fontWeight: FontWeight.bold),
+                          hintText: "you@domain.com",
+                          hintStyle: TextStyle(
+                              color: Color.fromARGB(255, 151, 15, 241)),
+                          prefixIcon: Icon(
+                            Icons.person,
+                            color: Color.fromARGB(255, 191, 55, 245),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                                width: 2,
+                                color: Color.fromARGB(255, 205, 47, 236)),
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                                width: 2,
+                                color: Color.fromARGB(255, 205, 47, 236)),
+                            borderRadius: BorderRadius.circular(20),
                           ),
                         ),
                       ),
                     ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Center(
-                      child: Container(
-                        width: 350,
-                        child: TextField(
-                          obscureText: true,
-                          decoration: InputDecoration(
-                            label: Text(
-                              "Password",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Color.fromARGB(255, 191, 55, 245)),
-                            ),
-                            labelStyle: TextStyle(fontWeight: FontWeight.bold),
-                            hintText: " Password",
-                            hintStyle: TextStyle(
-                              color: Color.fromARGB(255, 151, 15, 241),
-                            ),
-                            prefixIcon: Icon(
-                              Icons.lock,
-                              color: Color.fromARGB(255, 191, 55, 245),
-                            ),
-                            suffixIcon: IconButton(
-                              icon: Icon(Icons.visibility),
-                              onPressed: () {},
-                              color: Color.fromARGB(255, 191, 55, 245),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                  width: 2,
-                                  color: Color.fromARGB(255, 205, 47, 236)),
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                  width: 2,
-                                  color: Color.fromARGB(255, 205, 47, 236)),
-                              borderRadius: BorderRadius.circular(20),
-                            ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Center(
+                    child: Container(
+
+                      width: 350,
+                      child: TextField(
+                        obscureText: true,
+                        decoration: InputDecoration(
+                          label: Text(
+                            "Password",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Color.fromARGB(255, 191, 55, 245)),
+                          ),
+                          labelStyle: TextStyle(fontWeight: FontWeight.bold),
+                          hintText: " Password",
+                          hintStyle: TextStyle(
+                            color: Color.fromARGB(255, 151, 15, 241),
+                          ),
+                          prefixIcon: Icon(
+                            Icons.lock,
+                            color: Color.fromARGB(255, 191, 55, 245),
+                          ),
+                          suffixIcon: IconButton(
+                            icon: Icon(Icons.visibility),
+                            onPressed: () {},
+                            color: Color.fromARGB(255, 191, 55, 245),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                                width: 2,
+                                color: Color.fromARGB(255, 205, 47, 236)),
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                                width: 2,
+                                color: Color.fromARGB(255, 205, 47, 236)),
+                            borderRadius: BorderRadius.circular(20),
                           ),
                         ),
                       ),
                     ),
-                    SizedBox(
-                      height: 0,
-                    ),
-                    Positioned(
-                        child: SingleChildScrollView(
+                  ),
+                  SizedBox(
+                    height: 0,
+                  ),
+                  Container(
+                      child: SingleChildScrollView(
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
-                              padding: EdgeInsets.only(left: 230),
-                              child: TextButton(
-                                  onPressed: () {},
-                                  child: Text(
-                                    "Forgot Passowrd? ",
-                                    style: TextStyle(
-                                        color: const Color.fromARGB(
-                                            255, 0, 102, 255),
-                                        fontFamily: "Delies",
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.bold),
-                                  ))),
-                          Row(
-                            children: [
-                              SizedBox(
-                                width: 20,
+                              Center(
+                                child: Container(
+                                  width: 370,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      Container(
+                                          child:  TextButton(
+                                                onPressed: () {},
+                                                child: Text(
+                                                  "Forgot Passowrd? ",
+                                                  style: TextStyle(
+                                                      color: const Color.fromARGB(
+                                                          255, 0, 102, 255),
+                                                      fontFamily: "Delies",
+                                                      fontSize: 15,
+                                                      fontWeight: FontWeight.bold),
+                                                )),
+                                          ),
+                                    ],
+                                  ),
+                                ),
                               ),
-                              Checkbox(
-                                value: false,
-                                onChanged: null,
-                                activeColor: Colors.blueAccent,
+                           
+                          Center(
+                            child: Container(
+                              width: 370,
+                              child: Row(
+                                children: [
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Checkbox(
+                                    value: false,
+                                    onChanged: null,
+                                    activeColor: Colors.blueAccent,
+                                  ),
+                                  Container(
+                                      padding: EdgeInsets.only(left: 0),
+                                      child: Text(
+                                        "Remember me",
+                                        style: TextStyle(
+                                            color: const Color.fromARGB(
+                                                255, 0, 102, 255),
+                                            fontFamily: "Delies",
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.bold),
+                                      )),
+                                ],
                               ),
-                              Container(
-                                  padding: EdgeInsets.only(left: 0),
-                                  child: Text(
-                                    "Remember me",
-                                    style: TextStyle(
-                                        color: const Color.fromARGB(
-                                            255, 0, 102, 255),
-                                        fontFamily: "Delies",
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.bold),
-                                  )),
-                            ],
+                            ),
                           ),
+                          SizedBox(height: 5,),
                           Center(
                               child: ElevatedButton(
                                   style: ButtonStyle(
@@ -264,16 +272,24 @@ class Welcome extends StatelessWidget {
                             child: Text(
                               "- OR -",
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 16),
+                                  fontWeight: FontWeight.bold, fontSize: 13),
                             ),
                           ),
+                          SizedBox(height: 3,),
+                          Center(
+                            child: Text(
+                              " Sign in with ",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 15),
+                            ),
+                          ),
+                          SizedBox(height: 10,),
                           Center(
                             child: Wrap(
                               spacing: 20,
                               children: [
                                 Container(
                                     decoration: BoxDecoration(
-                                      
                                       border: Border.all(
                                           color: Colors.black, width: 2),
                                       borderRadius: BorderRadius.circular(33),
@@ -281,11 +297,11 @@ class Welcome extends StatelessWidget {
                                     ),
                                     child: SvgPicture.asset(
                                       "assets/svg/facebook.svg",
-                                      width: 60,color: Colors.white,
+                                      width: 60,
+                                      color: Colors.white,
                                     )),
-                                    Container(
+                                Container(
                                     decoration: BoxDecoration(
-                                      
                                       border: Border.all(
                                           color: Colors.black, width: 2),
                                       borderRadius: BorderRadius.circular(33),
@@ -293,11 +309,11 @@ class Welcome extends StatelessWidget {
                                     ),
                                     child: SvgPicture.asset(
                                       "assets/svg/discord.svg",
-                                      width: 60,color: Color.fromARGB(255, 255, 255, 255),
+                                      width: 60,
+                                      color: Color.fromARGB(255, 255, 255, 255),
                                     )),
-                                    Container(
+                                Container(
                                     decoration: BoxDecoration(
-                                      
                                       border: Border.all(
                                           color: Colors.black, width: 2),
                                       borderRadius: BorderRadius.circular(33),
@@ -305,19 +321,53 @@ class Welcome extends StatelessWidget {
                                     ),
                                     child: SvgPicture.asset(
                                       "assets/svg/github.svg",
-                                      width: 60,color: const Color.fromARGB(255, 0, 0, 0),
+                                      width: 60,
+                                      color: const Color.fromARGB(255, 0, 0, 0),
                                     ))
                               ],
                             ),
                           ),
+                          SizedBox(height: 5,),
+                          Center(
+                            child: Container(
+                              width: 360,
+                              child: Row(mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                Container(
+                                          padding: EdgeInsets.only(left: 0),
+                                          child: Text(
+                                            "Don't have an Account?",
+                                            style: TextStyle(
+                                                color: Color.fromARGB(255, 40, 41, 41),
+                                                fontFamily: "Delies",
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.bold,
+                                                wordSpacing: 2,
+                                                letterSpacing: 1),
+                                          )),
+                                          TextButton(
+                                                onPressed: () {},
+                                                child: Text(
+                                                  "Sign Up ",
+                                                  style: TextStyle(
+                                                      color: const Color.fromARGB(
+                                                          255, 0, 102, 255),
+                                                      fontFamily: "Delies",
+                                                      fontSize: 15,
+                                                      fontWeight: FontWeight.bold,
+                                                      wordSpacing: 2),
+                                                )),
+                              
+                              ],),
+                            ),
+                          )
                         ],
                       ),
-                    ))
-                  ],
-                ),
-              ))
-            ],
-          ),
+                    )),
+                ],
+              ),
+            ))
+          ],
         ),
       ),
     );

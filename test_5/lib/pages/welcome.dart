@@ -124,8 +124,7 @@ class Welcome extends StatelessWidget {
                     ),
                     Center(
                       child: Container(
-      
-                        width: 350,
+                         width: 350,
                         child: TextField(
                           obscureText: true,
                           decoration: InputDecoration(
@@ -182,6 +181,9 @@ class Welcome extends StatelessWidget {
                                       children: [
                                         Container(
                                             child:  TextButton(
+                                                  style: TextButton.styleFrom(
+                                                    foregroundColor: Colors.pink
+                                                  ),
                                                   onPressed: () {},
                                                   child: Text(
                                                     "Forgot Passowrd? ",

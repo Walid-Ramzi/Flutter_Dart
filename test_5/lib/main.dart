@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import "package:test_5/pages/about.dart";
+import "package:test_5/pages/aboutar.dart";
+import "package:test_5/pages/forgetpass.dart";
 import "package:test_5/pages/login.dart";
 import "package:test_5/pages/sign_up.dart";
 import "package:test_5/pages/welcome.dart";
@@ -23,7 +25,11 @@ class Test_5 extends StatelessWidget {
         "/login": (context) => const Login(),
         "/sign_up": (context) => const SignUp(),
         "/about": (context) => const About(),
+        "/aboutar":(context) => const Aboutar(),
+        "/forgetpass":(context) => const Password(),
       },
     );
   }
 }
+
+

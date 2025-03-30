@@ -3,8 +3,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class About extends StatelessWidget {
-  const About({super.key});
+class Aboutar extends StatelessWidget {
+  const Aboutar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -60,9 +60,9 @@ class About extends StatelessWidget {
 
                           child: Center(
                             child: Text(
-                              "ع",
+                              "EN",
                               style: TextStyle(
-                                  fontSize: 30, fontWeight: FontWeight.bold),
+                                  fontSize: 25, fontWeight: FontWeight.bold,fontStyle: FontStyle.italic,fontFamily: "Delius"),
                             ),
                           ),
                           //padding: EdgeInsets.all(10),
@@ -81,17 +81,19 @@ class About extends StatelessWidget {
                       ]),
                       shape: CircleBorder(),
                       onPressed: () {
-                        Navigator.pushNamed(context, "/aboutar");
+                        Navigator.pop(context);
                       })),
               SizedBox(
                 height: 100,
               ),
-              Text(
-                "Welcome to our App",
-                style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold),
+              Center(
+                child: Text(
+                  "Welcome to our App",
+                  style: TextStyle(
+                      fontSize: 30,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
+                ),
               ),
               SizedBox(
                 height: 20,
@@ -100,10 +102,12 @@ class About extends StatelessWidget {
                 width: 390,
                 child: Center(
                   child: Text(
-                    "Thank you for joining us in this early stage of development. This is a beta version, meaning we're still fine-tuning features and improving the experience. Your feedback is invaluable in helping us build a better app for you!"
-                    "Let us know what you think and report any issues—you’re shaping the future of [DEVRTO]!",
+                    "مرحبًا بك في [DEVERTO]!"
+                    "شكرًا لانضمامك إلينا في هذه المرحلة المبكرة من التطوير. هذا إصدار تجريبي (Beta)، مما يعني أننا ما زلنا نعمل على تحسين الميزات وتطوير التجربة. ملاحظاتك قيمة جدًا لمساعدتنا في بناء تطبيق أفضل لك!"
+                    "شاركنا رأيك وأبلغ عن أي مشكلات—أنت جزء من تطوير مستقبل [DEVERTO]!",
                     textAlign: TextAlign.center,
                     style: TextStyle(
+                        fontFamily: "arabe",
                         fontSize: 20,
                         fontStyle: FontStyle.italic,
                         fontWeight: FontWeight.bold),
